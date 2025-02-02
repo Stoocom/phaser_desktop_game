@@ -48,7 +48,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "./dist"),
-    publicPath: '/',
+    publicPath: '/phaser_desktop_game',
     filename: "[name].[chunkhash].js",
     chunkFilename: "[name].[chunkhash].js",
     clean: true,
