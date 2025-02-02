@@ -131,79 +131,79 @@ import * as Phaser from "phaser";
 
     function update ()
     {
-        if (cursors.left.isDown)
-            {
-                player.setVelocityX(-160);
+        // if (cursors.left.isDown)
+        //     {
+        //         player.setVelocityX(-160);
     
-                player.anims.play('left', true);
-            }
-            else if (cursors.right.isDown)
-            {
-                player.setVelocityX(160);
+        //         player.anims.play('left', true);
+        //     }
+        //     else if (cursors.right.isDown)
+        //     {
+        //         player.setVelocityX(160);
     
-                player.anims.play('right', true);
-            }
-            else if (keyA.isDown)
-            {
-                player2.setVelocityX(-160);
-                player2.anims.play('left', true);
-            }
-            else if (keyD.isDown)
-            {
-                player2.setVelocityX(160);
-                player2.anims.play('right', true);
-            }
-            else if (keyW.isDown && player2.body.touching.down)
-            {
-                player2.setVelocityY(-330);
-            }
-            else
-            {
-                player.setVelocityX(0);
+        //         player.anims.play('right', true);
+        //     }
+        //     else if (keyA.isDown)
+        //     {
+        //         player2.setVelocityX(-160);
+        //         player2.anims.play('left', true);
+        //     }
+        //     else if (keyD.isDown)
+        //     {
+        //         player2.setVelocityX(160);
+        //         player2.anims.play('right', true);
+        //     }
+        //     else if (keyW.isDown && player2.body.touching.down)
+        //     {
+        //         player2.setVelocityY(-330);
+        //     }
+        //     else
+        //     {
+        //         player.setVelocityX(0);
     
-                player.anims.play('turn');
-                player2.setVelocityX(0);
+        //         player.anims.play('turn');
+        //         player2.setVelocityX(0);
     
-                player2.anims.play('turn');
-            }
+        //         player2.anims.play('turn');
+        //     }
     
-            if (cursors.up.isDown && player.body.touching.down)
-            {
-                player.setVelocityY(-330);
-            }
+        //     if (cursors.up.isDown && player.body.touching.down)
+        //     {
+        //         player.setVelocityY(-330);
+        //     }
     }
 
     function collectStar (player, star)
     {
         console.log('player', player);
-        star.disableBody(true, true);
-        score += 10;
-        scoreText.setText('Score: ' + score);
-        console.log('collectStar', stars.countActive(true));
+        // star.disableBody(true, true);
+        // score += 10;
+        // scoreText.setText('Score: ' + score);
+        // console.log('collectStar', stars.countActive(true));
 
-        if (stars.countActive(true) === 0) 
-        {
-            console.log(true);
-            stars.children.iterate(function (child) {
-                child.enableBody(true, child.x, 0, true, true);
-            });
+        // if (stars.countActive(true) === 0) 
+        // {
+        //     console.log(true);
+        //     stars.children.iterate(function (child) {
+        //         child.enableBody(true, child.x, 0, true, true);
+        //     });
         
-            let x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+        //     let x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
         
-            let bomb = bombs.create(x, 16, 'bomb');
-            bomb.setBounce(1);
-            bomb.setCollideWorldBounds(true);
-            bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
-        }
+        //     let bomb = bombs.create(x, 16, 'bomb');
+        //     bomb.setBounce(1);
+        //     bomb.setCollideWorldBounds(true);
+        //     bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+        // }
     }
 
     function hitBomb (player, bomb)
     {
-        this.physics.pause();
+        // this.physics.pause();
 
-        player.setTint(0xff0000);
+        // player.setTint(0xff0000);
 
-        player.anims.play('turn');
+        // player.anims.play('turn');
 
         // gameOver = true;
     }
